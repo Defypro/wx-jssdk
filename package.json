@@ -1,10 +1,9 @@
 {
   "name": "@defy/wx-jssdk",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "微信jssdk CommonJS",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
