@@ -1,7 +1,7 @@
 {
   "name": "@defy/wx-jssdk",
-  "version": "1.0.1",
-  "description": "微信jssdk CommonJS",
+  "version": "1.0.2",
+  "description": "微信jssdk ES6",
   "main": "src/index.js",
   "scripts": {
   },
@@ -10,8 +10,8 @@
     "url": "git+https://github.com/Defypro/wx-jssdk.git"
   },
   "keywords": [
-    "wechat",
-    "jssdk"
+    "wechat-jssdk",
+    "ES6"
   ],
   "author": "Defy",
   "license": "ISC",
