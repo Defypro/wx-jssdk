@@ -1,6 +1,6 @@
 {
   "name": "@defy/wx-jssdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "微信jssdk ES6",
   "main": "src/index.js",
   "scripts": {
