@@ -1,0 +1,1 @@
+将微信JSSDK发布到npm，使用commonjs规范
