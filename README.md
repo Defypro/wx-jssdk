@@ -1,1 +1,3 @@
-将微信JSSDK发布到npm，使用commonjs规范
+提取微信官方JSSDK，部分api接口使用Promise包装，后期根据使用添加
+
+npm i @defy/wx-jssdk -S
