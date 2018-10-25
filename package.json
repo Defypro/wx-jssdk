@@ -1,9 +1,11 @@
 {
   "name": "@defy/wx-jssdk",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "微信jssdk ES6",
-  "main": "src/index.js",
+  "main": "dist/wx-jssdk.common.js",
+  "module": "dist/wx-jssdk.esm.js",
   "scripts": {
+    "build": "rimraf dist && rollup -c && uglifyjs dist/wx-jssdk.js -c -m --comments -o dist/wx-jssdk.min.js"
   },
   "repository": {
     "type": "git",
@@ -14,9 +16,16 @@
     "ES6"
   ],
   "author": "Defy",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Defypro/wx-jssdk/issues"
   },
-  "homepage": "https://github.com/Defypro/wx-jssdk#readme"
+  "homepage": "https://github.com/Defypro/wx-jssdk#readme",
+  "devDependencies": {
+    "buble": "^0.19.6",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.66.6",
+    "rollup-plugin-buble": "^0.19.4",
+    "uglify-js": "^3.4.9"
+  }
 }

@@ -1,4 +1,4 @@
-const wx = require('../lib/jweixin-1.4.0');
+import { wx } from './jweixin-1.4.0'
 
 const extend = {
     /**
@@ -145,4 +145,4 @@ const extend = {
     }
 }
 
-module.exports = {...wx, ...extend};
+export default Object.assign(wx, extend)
