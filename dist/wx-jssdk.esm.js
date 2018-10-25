@@ -657,6 +657,6 @@ var extend = {
     }
 };
 
-var index = Object.assign(wx, extend);
+var index = Object.assign({}, wx, extend);
 
 export default index;

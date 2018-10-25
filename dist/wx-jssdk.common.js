@@ -659,6 +659,6 @@ var extend = {
     }
 };
 
-var index = Object.assign(wx, extend);
+var index = Object.assign({}, wx, extend);
 
 module.exports = index;

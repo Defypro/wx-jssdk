@@ -145,4 +145,4 @@ const extend = {
     }
 }
 
-export default Object.assign(wx, extend)
+export default Object.assign({}, wx, extend)

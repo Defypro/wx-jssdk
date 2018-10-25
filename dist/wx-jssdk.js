@@ -663,7 +663,7 @@
         }
     };
 
-    var index = Object.assign(wx, extend);
+    var index = Object.assign({}, wx, extend);
 
     return index;
 
