@@ -1,5 +1,5 @@
 /**
- * vue-bus v1.0.5
+ * wx-jssdk v1.0.8
  * https://github.com/defypro/wx-jssdk
  * @license MIT
  */
