@@ -2,7 +2,7 @@ import { version } from './package.json'
 import buble from 'rollup-plugin-buble'
 
 const banner = `/**
- * vue-bus v${version}
+ * wx-jssdk v${version}
  * https://github.com/defypro/wx-jssdk
  * @license MIT
  */`
