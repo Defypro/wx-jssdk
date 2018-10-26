@@ -21,7 +21,7 @@ export default {
         }, {
             file: 'dist/wx-jssdk.js',
             format: 'umd',
-            name: 'WxJssdk',
+            name: 'wx',
             banner
         }
     ],
