@@ -5,8 +5,8 @@ import { wx } from './jweixin-1.4.0'
  * @param params
  * @returns {Promise<any>}
  */
-wx.configAsync = function (params = {debug: false, appId: '', timestamp: '', nonceStr: '', signature: '', jsApiList: []}) {
-    return new Promise(function (resolve, reject) {
+wx.configAsync = (params = {debug: false, appId: '', timestamp: '', nonceStr: '', signature: '', jsApiList: []}) => {
+    return new Promise((resolve, reject) => {
         wx.config(params);
         wx.ready(resolve);
         wx.error(function (res) {
@@ -20,8 +20,11 @@ wx.configAsync = function (params = {debug: false, appId: '', timestamp: '', non
  * @param params
  * @returns {Promise<any>}
  */
-wx.updateTimelineShareDataAsync = function (params = {}) {
-    return new Promise((resolve) => {
+wx.updateTimelineShareDataAsync = (params = {}) => {
+    return new Promise((resolve, reject) => {
+        params.fail = res => {
+            reject(res);
+        };
         wx.updateTimelineShareData(params, (res) => {
             resolve(res);
         });
@@ -33,8 +36,11 @@ wx.updateTimelineShareDataAsync = function (params = {}) {
  * @param params
  * @returns {Promise<any>}
  */
-wx.updateAppMessageShareDataAsync = function (params = {}) {
-    return new Promise((resolve) => {
+wx.updateAppMessageShareDataAsync = (params = {}) => {
+    return new Promise((resolve, reject) => {
+        params.fail = res => {
+            reject(res);
+        };
         wx.updateTimelineShareData(params, (res) => {
             resolve(res);
         });
@@ -46,13 +52,16 @@ wx.updateAppMessageShareDataAsync = function (params = {}) {
  * @param params
  * @returns {Promise<any>}
  */
-wx.scanQRCodeAsync = function (params = {needResult: 1, scanType: ["qrCode", "barCode"]}) {
-    return new Promise(resolve => {
+wx.scanQRCodeAsync = (params = {needResult: 1, scanType: ["qrCode", "barCode"]}) => {
+    return new Promise((resolve, reject) => {
         wx.scanQRCode({
             needResult: params.needResult,
             scanType: params.scanType,
-            success: function (res) {
+            success(res) {
                 resolve(res);
+            },
+            fail(res) {
+                reject(res);
             }
         });
     })

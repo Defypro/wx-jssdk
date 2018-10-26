@@ -1,5 +1,5 @@
 /**
- * wx-jssdk v1.0.9
+ * wx-jssdk v1.0.10
  * https://github.com/defypro/wx-jssdk
  * @license MIT
  */
@@ -517,7 +517,10 @@
     wx.updateTimelineShareDataAsync = function (params) {
         if ( params === void 0 ) params = {};
 
-        return new Promise(function (resolve) {
+        return new Promise(function (resolve, reject) {
+            params.fail = function (res) {
+                reject(res);
+            };
             wx.updateTimelineShareData(params, function (res) {
                 resolve(res);
             });
@@ -532,7 +535,10 @@
     wx.updateAppMessageShareDataAsync = function (params) {
         if ( params === void 0 ) params = {};
 
-        return new Promise(function (resolve) {
+        return new Promise(function (resolve, reject) {
+            params.fail = function (res) {
+                reject(res);
+            };
             wx.updateTimelineShareData(params, function (res) {
                 resolve(res);
             });
@@ -547,12 +553,15 @@
     wx.scanQRCodeAsync = function (params) {
         if ( params === void 0 ) params = {needResult: 1, scanType: ["qrCode", "barCode"]};
 
-        return new Promise(function (resolve) {
+        return new Promise(function (resolve, reject) {
             wx.scanQRCode({
                 needResult: params.needResult,
                 scanType: params.scanType,
-                success: function (res) {
+                success: function success(res) {
                     resolve(res);
+                },
+                fail: function fail(res) {
+                    reject(res);
                 }
             });
         })
