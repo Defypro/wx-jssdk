@@ -494,7 +494,7 @@ var wx;
  * @returns {Promise<any>}
  */
 wx.configAsync = function (params) {
-    if ( params === void 0 ) params = {};
+    if ( params === void 0 ) params = {debug: false, appId: '', timestamp: '', nonceStr: '', signature: '', jsApiList: []};
 
     return new Promise(function (resolve, reject) {
         wx.config(params);

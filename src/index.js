@@ -5,7 +5,7 @@ import { wx } from './jweixin-1.4.0'
  * @param params
  * @returns {Promise<any>}
  */
-wx.configAsync = function (params = {}) {
+wx.configAsync = function (params = {debug: false, appId: '', timestamp: '', nonceStr: '', signature: '', jsApiList: []}) {
     return new Promise(function (resolve, reject) {
         wx.config(params);
         wx.ready(resolve);
