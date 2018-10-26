@@ -1,1 +1,18 @@
 language: javascript
+
+# Travis-CI Caching
+cache:
+  directories:
+    - node_modules
+
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+script:
+  - npm run build
+
+branches:
+  only:
+    - master

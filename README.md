@@ -1,4 +1,4 @@
-# wx-jssdk [![Build Status](https://img.shields.io/circleci/project/yangmingshan/@defy/wx-jssdk.svg)](https://circleci.com/gh/yangmingshan/@defy/wx-jssdk) [![Coverage Status](https://img.shields.io/codecov/c/github/yangmingshan/@defy/wx-jssdk.svg)](https://codecov.io/gh/yangmingshan/@defy/wx-jssdk) [![Downloads](https://img.shields.io/npm/dt/@defy/wx-jssdk.svg)](https://www.npmjs.com/package/@defy/wx-jssdk) [![Version](https://img.shields.io/npm/v/@defy/wx-jssdk.svg)](https://www.npmjs.com/package/@defy/wx-jssdk) [![License](https://img.shields.io/npm/l/@defy/wx-jssdk.svg)](https://www.npmjs.com/package/@defy/wx-jssdk)
+# wx-jssdk [![Build Status](https://travis-ci.org/defypro/wx-jssdk.svg?branch=master)](https://travis-ci.org/defypro/wx-jssdk)[![Downloads](https://img.shields.io/npm/dt/@defy/wx-jssdk.svg)](https://www.npmjs.com/package/@defy/wx-jssdk) [![Version](https://img.shields.io/npm/v/@defy/wx-jssdk.svg)](https://www.npmjs.com/package/@defy/wx-jssdk) [![License](https://img.shields.io/npm/l/@defy/wx-jssdk.svg)](https://www.npmjs.com/package/@defy/wx-jssdk)
 提取微信官方JSSDK，部分api接口使用Promise包装，后期根据使用添加.
 
 ## Installation
